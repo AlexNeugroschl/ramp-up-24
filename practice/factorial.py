@@ -12,5 +12,3 @@ def recursive(num:int):
     if num == 0:
         return 1
     return num * recursive(num - 1)
-
-calculate_factorials(2)

@@ -7,5 +7,3 @@ def reverse(word:str):
         reversed = i + reversed
     print(reversed)
     print(vowels)
-
-reverse("Granite")
