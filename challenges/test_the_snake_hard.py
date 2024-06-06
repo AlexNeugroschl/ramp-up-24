@@ -1,5 +1,5 @@
 import pytest
-import the_snake_area_filling_hard
+from the_snake_area_filling_hard import snakefill
 
 def test():
     assert snakefill(3) == 3

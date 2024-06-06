@@ -1,5 +1,5 @@
 import pytest
-import calculate_the_profit_medium
+from calculate_the_profit_medium import profit
 
 def test_calculate1():
     assert profit({

@@ -1,5 +1,5 @@
 import pytest
-import return_the_sum_of_two_numbers_very_easy
+from return_the_sum_of_two_numbers_very_easy import addition
 
 def test():
     assert addition(5,3) == 8

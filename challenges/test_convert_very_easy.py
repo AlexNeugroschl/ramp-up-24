@@ -1,5 +1,5 @@
 import pytest
-import convert_minutes_into_seconds_very_easy
+from  convert_minutes_into_seconds_very_easy import convert
 
 def test_convert_works():
     assert convert(1) == 60

@@ -1,5 +1,5 @@
 import pytest
-import imaginary_coding_interview_hard
+from imaginary_coding_interview_hard import interview
 
 def test():
     assert interview([5, 5, 10, 10, 15, 15, 20, 20], 120) == "qualified"

@@ -1,5 +1,5 @@
 import pytest
-import stuttering_function_easy
+from stuttering_function_easy import stutter
 
 def test():
     assert stutter("word") == "wo... wo... word?"

@@ -1,5 +1,5 @@
 import pytest
-import find_the_discount_easy
+from find_the_discount_easy import dis
 
 def test_discount():
     assert  dis(100, 25) == 75

@@ -1,5 +1,5 @@
 import pytest 
-import length_of_number_medium
+from length_of_number_medium import number_length
 
 def test():
     assert number_length(5000) == 4
