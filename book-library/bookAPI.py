@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import book
+from book import Book
 
 app = FastAPI() 
 
@@ -14,3 +14,22 @@ async def add_book(book:book.Book):
     newID = len(books.keys) + 1
     books[newID] = book
     return book
+
+@app.get('/books/')
+def get_books():
+    return books.values
+
+@app.get('/books/{id}')
+def get_book(id:int):
+    return books[id]
+
+@app.put('/books/{id}')
+def update_book(id:int, book:book.Book):
+    books[id] = book
+    return books
+
+@app.delete('/books/{id}')
+def delete_book(id:int):
+    del books[id]
+    return books
+
