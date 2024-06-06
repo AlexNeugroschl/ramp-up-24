@@ -7,4 +7,3 @@ def snakefill(n):
         if snake_size <= screensize:
             times_ate += 1
     return times_ate
-print(snakefill(24))

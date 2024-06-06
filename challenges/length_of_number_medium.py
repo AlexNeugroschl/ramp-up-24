@@ -4,4 +4,3 @@ def number_length(num):
     for i in string:
         digits += 1
     return digits
-print(number_length(56))
