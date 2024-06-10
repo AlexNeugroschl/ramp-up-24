@@ -9,7 +9,7 @@ print("Subscribed to the 'my_channel' channel...")
 
 for message in pubsub.listen():
     if message['type'] == 'message':
-        # Decode the byte string to a regular string
-        print(f"Received message: {message['data'].decode('utf-8')}")
+        # No need to decode if decode_responses=True is set
+        print(f"Received message: {message['data']}")
     else:
         print(f"Received non-message data: {message}")
