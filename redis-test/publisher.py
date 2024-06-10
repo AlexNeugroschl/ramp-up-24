@@ -5,14 +5,10 @@ app = FastAPI()
 
 redis_client = redis.Redis(host='localhost', port=6379, db=0)
 
-@app.post("/publish")
-async def publish_message(request: Request):
-    data = await request.json()
-    msg = data.get("msg")
-    if not msg:
-        return {"error": "Message text is required"}
-    redis_client.publish("my_channel", msg)
-    return {"message": "Message published successfully"}
+@app.post("/publish{message}")
+async def publish_message(request:Request, message:str):
+    redis_client.publish("my_channel", message)
+    return {"message":"Message published successfully", "message":message}
 
 if __name__ == "__main__":
     import uvicorn
